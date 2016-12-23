@@ -118,10 +118,13 @@ var factorial = function(n) {
 };
 
 
-var perm = function (values, currentCombo, allPerm) {
+var perm = function (values, currentCombo = [], allPerm  = []) {
+  /*
   currentCombo = currentCombo || [];
-  allPerm = allPerm || [];
-
+  if (currentCombo === undefined) {
+    currentCombo = [];
+  }
+  */
   //base case
   if (values.length < 1) {
     allPerm.push(currentCombo);
